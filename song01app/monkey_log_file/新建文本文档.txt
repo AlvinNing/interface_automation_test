@@ -1,0 +1,13 @@
+appium
+robotium
+Selenum
+web 	功能自动化 UI自动化 性能
+APP 	功能自动化 UI自动化 性能
+接口 	接口自动化 接口性能 持续集成
+APP UI测试，都检测哪些？name，class，tagName，location，text，isSlected，isTouched
+APP 性能测试，都检测哪些？可以对源码测试，也可以测试apk、可以测试Android Native和Android Hybrid App、可以测试网络链接和声音等
+git GitHub
+分支主干
+json解析
+性能监控
+

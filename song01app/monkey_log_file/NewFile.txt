@@ -1,0 +1,17 @@
+AbcdefgAAAAAAgsgsggagAAAAAAACRASH
+<a href="?page=1">1</a>Monkey finished'
+                <a href="?page=2">2</a>
+                <a href="?page=3">3</a>
+   Exception             <a href="?page=4">4</a>
+                <a href="?page=5">5</a>
+current_page = request.args.get('page', '')
+        current_page = int(current_page)
+        print(current_page)
+        current_page = 1
+     Exception   start = (current_page-1)*10
+        end = (current_page)*10Monkey finished'
+ANRANRANRANR
+ANRANRANR
+ANRANRANR
+CRASH
+CRASH

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>接口自动化</title>
+</head>
+<body>
+    <form method="post" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h1>测试平台-接口自动化</h1><small>接口自动化</small>
+        <p>请上传接口用例文件，文件格式为.xlsx</p>
+        请输入执行人姓名：<input type="text" name="peoples">
+        <input type="file" name="files">
+        <input type="submit" name="submits" value="上传"><br>
+        自动执行接口测试结果如下：<hr>
+    </form>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>项目</td>
+                <td>用例id</td>
+                <td>接口名称</td>
+                <td>用例描述</td>
+                <td>请求方式（get/post）</td>
+                <td>请求URL</td>
+                <td>请求参数</td>
+                <td>检查点验证</td>
+                <td>请求报文</td>
+                <td>返回报文</td>
+                <td>测试执行人</td>
+                <td>测试结果</td>
+                <td>备注</td>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for list in data %}
+                <tr>
+
+                    <td>{{ list.id }}</td>
+                    <td>{{ list.project }}</td>
+                    <td>{{ list.case_id }}</td>
+                    <td>{{ list.interface_name }}</td>
+                    <td>{{ list.case_description }}</td>
+                    <td>{{ list.req_method }}</td>
+                    <td>{{ list.req_url }}</td>
+                    <td>{{ list.req_parameter }}</td>
+                    <td>{{ list.checkpoint }}</td>
+                    <td>{{ list.request_message }}</td>
+                    <td>{{ list.response_message }}</td>
+                    <td>{{ list.people }}</td>
+                    <td>{{ list.test_res }}</td>
+                    <td>{{ list.remarks }}</td>
+                    <td>{{ list.time }}</td>
+
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
